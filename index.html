@@ -1,33 +1,153 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<script type="text/javascript">
-function open_win() {
-    window.open("https://r2a.io/7x98lRZFg")
-    window.open("https://r2a.io/7xdOX0Y0m")
-    window.open("https://r2a.io/7x9MyuRGx")
-    window.open("https://r2a.io/7xgnnRFGu")
-    window.open("https://r2a.io/7xApFFNHq")
-    window.open("https://r2a.io/7xh9aKP4x")
-    window.open("https://r2a.io/7xcofwdXt")
-    window.open("https://r2a.io/7x9YLCNbX")
-    window.open("https://r2a.io/7xk33gkbP")
-    window.open("https://r2a.io/7xb7pjhy4")
-    window.open("https://r2a.io/7xoFE6TSo")
-    window.open("https://r2a.io/7xyCl6aaf")
-    window.open("https://r2a.io/7xyCl6aaf")
-    window.open("https://r2a.io/7x9hCwwpW")
-    window.open("https://r2a.io/7x94mx67s")
-    window.open("https://r2a.io/7xjBO0fYx")
-    window.open("https://r2a.io/7xbYvEWcA")
-    window.open("https://r2a.io/7x96ULbop")
-}
-</script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-<form>
-<input type=button value="Open Windows" onclick="open_win()">
-</form>
+    <div class="flexgrid">
+        <button id="idone" class="b one"></button>
+        <button id="idtwo" class="b two"></button>
+        <button id="idthree" class="b three"></button>
+        <button id="idfour" class="b four"></button>
+        <button id="idfive" class="b five"></button>
+        <button id="idsix" class="b six"></button>
+        <button id="idseven" class="b seven"></button>
+        <button id="ideight" class="b eight"></button>
+        <button id="idnine" class="b nine"></button>
+        <button id="reset" class="reset">Reset</button>
+
+    </div>
+    <script>
+        const a = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+        document.getElementById("reset").onclick = function () {
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    a[i][j] = 0
+                }
+            }
+            refresh();
+        }
+        document.getElementById("idone").onclick = function () {
+            a[0][0] = !a[0][0];
+            a[1][0] = !a[1][0];
+            a[0][1] = !a[0][1];
+            refresh();
+        }
+        document.getElementById("idtwo").onclick = function () {
+            a[0][0] = !a[0][0];
+            a[0][1] = !a[0][1];
+            a[0][2] = !a[0][2];
+            a[1][1] = !a[1][1];
+            refresh();
+        }
+        document.getElementById("idthree").onclick = function () {
+            a[0][1] = !a[0][1];
+            a[0][2] = !a[0][2];
+            a[1][2] = !a[1][2];
+            refresh();
+        }
+        document.getElementById("idfour").onclick = function () {
+            a[0][0] = !a[0][0];
+            a[1][0] = !a[1][0];
+            a[1][1] = !a[1][1];
+            a[2][0] = !a[2][0];
+            refresh();
+        }
+        document.getElementById("idfive").onclick = function () {
+            a[0][1] = !a[0][1];
+            a[1][0] = !a[1][0];
+            a[1][1] = !a[1][1];
+            a[1][2] = !a[1][2];
+            a[2][1] = !a[2][1];
+            refresh();
+        }
+        document.getElementById("idsix").onclick = function () {
+            a[0][2] = !a[0][2];
+            a[1][1] = !a[1][1];
+            a[1][2] = !a[1][2];
+            a[2][2] = !a[2][2];
+            refresh();
+        }
+        document.getElementById("idseven").onclick = function () {
+            a[1][0] = !a[1][0];
+            a[2][0] = !a[2][0];
+            a[2][1] = !a[2][1];
+            refresh();
+        }
+        document.getElementById("ideight").onclick = function () {
+            a[1][1] = !a[1][1];
+            a[2][0] = !a[2][0];
+            a[2][1] = !a[2][1];
+            a[2][2] = !a[2][2];
+            refresh();
+        }
+        document.getElementById("idnine").onclick = function () {
+            a[1][2] = !a[1][2];
+            a[2][1] = !a[2][1];
+            a[2][2] = !a[2][2];
+            refresh();
+        }
+
+
+        function refresh() {
+            if (a[0][0] == 1) {
+                document.getElementById("idone").style.background = "orange";
+            } else {
+                document.getElementById("idone").style.background = "pink";
+            }
+            if (a[0][1] == 1) {
+                document.getElementById("idtwo").style.background = "orange";
+            } else {
+                document.getElementById("idtwo").style.background = "pink";
+            }
+            if (a[0][2] == 1) {
+                document.getElementById("idthree").style.background = "orange";
+            } else {
+                document.getElementById("idthree").style.background = "pink";
+            }
+            if (a[1][0] == 1) {
+                document.getElementById("idfour").style.background = "orange";
+            } else {
+                document.getElementById("idfour").style.background = "pink";
+            }
+            if (a[1][1] == 1) {
+                document.getElementById("idfive").style.background = "orange";
+            } else {
+                document.getElementById("idfive").style.background = "pink";
+            }
+            if (a[1][2] == 1) {
+                document.getElementById("idsix").style.background = "orange";
+            } else {
+                document.getElementById("idsix").style.background = "pink";
+            }
+            if (a[2][0] == 1) {
+                document.getElementById("idseven").style.background = "orange";
+            } else {
+                document.getElementById("idseven").style.background = "pink";
+            }
+            if (a[2][1] == 1) {
+                document.getElementById("ideight").style.background = "orange";
+            } else {
+                document.getElementById("ideight").style.background = "pink";
+            }
+            if (a[2][2] == 1) {
+                document.getElementById("idnine").style.background = "orange";
+            } else {
+                document.getElementById("idnine").style.background = "pink";
+            }
+
+        }
+        refresh()
+    </script>
 </body>
 
 </html>

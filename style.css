@@ -1,0 +1,61 @@
+body {
+    background-color: rgb(42,42,51);
+
+}
+
+
+.flexgrid {
+    display: grid;
+    grid-template-columns: 1fr 150px 150px 150px 1fr;
+    grid-template-rows: 1fr 150px 150px 150px 75px 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
+
+    grid-template-areas: 
+    ". . . . ."
+    ". one two three ."
+    ". four five six ."
+    ". seven eight nine ."
+    ". . reset . .";
+}
+.b {
+    padding: 16px;
+    border: none;
+    border-radius: 20px;
+}
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.seven {
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+.reset {
+    background-color: rgb(66,65,77);
+    /* 51 49 60*/
+    border: none;
+    grid-area: reset;
+    border-radius: 20px;
+    color: rgba(251,251,254,1);
+}
+
